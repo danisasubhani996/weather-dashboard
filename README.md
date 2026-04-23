@@ -92,13 +92,6 @@ This project was developed as part of an internship task to demonstrate:
 
 ---
 
-## ✨ Key Highlights
-
-- Real-time weather updates  
-- Interactive UI with animations  
-- Smart UX (suggestions + history)  
-- Multiple forecast views  
-
 ---
 
 ## 👩‍💻 Author
