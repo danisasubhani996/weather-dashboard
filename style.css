@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: radial-gradient(circle at top, #2b5876, #1c1c1c);
+    transition: background 0.8s ease;
+}
+
+body.night {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+}
+
+.app {
+    width: 90%;
+    max-width: 900px;
+    text-align: center;
+}
+
+/* Search */
+.search-box {
+    position: relative;
+}
+
+.search-box input {
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    width: 180px;
+}
+
+.search-box button {
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    margin-left: 5px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #ff7b54, #ff3d00);
+    color: white;
+}
+
+/* Suggestions */
+.suggestions {
+    position: absolute;
+    width: 200px;
+    background: rgba(0,0,0,0.8);
+    border-radius: 8px;
+    margin-top: 5px;
+    text-align: left;
+}
+
+.suggestion-item {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.suggestion-item:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+/* Card */
+.card {
+    margin: 10px auto;
+    padding: 15px;
+    width: 250px;
+    border-radius: 18px;
+    backdrop-filter: blur(15px);
+    background: rgba(255,255,255,0.12);
+}
+
+.card h1 {
+    font-size: 36px;
+}
+
+/* Temp colors */
+.hot { color: #ff3d00; }
+.warm { color: #ff9800; }
+.cool { color: #00bcd4; }
+.cold { color: #90caf9; }
+
+/* Hourly */
+.hourly {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.hour-card {
+    min-width: 80px;
+    padding: 8px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.12);
+    font-size: 12px;
+}
+
+/* Forecast */
+.forecast {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.forecast-card {
+    width: 90px;
+    padding: 8px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.12);
+}
+
+/* Loader */
+.loader {
+    border: 4px solid rgba(255,255,255,0.2);
+    border-top: 4px solid white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin: 20px auto;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    100% { transform: rotate(360deg); }
+}
+
+/* Rain */
+.rain {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(transparent, rgba(255,255,255,0.3));
+    animation: rain 0.5s linear infinite;
+}
+
+@keyframes rain {
+    to { background-position: 0 100px; }
+}
+
+/* Snow */
+.snow {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(white 2px, transparent 2px);
+    background-size: 20px 20px;
+    animation: snow 5s linear infinite;
+}
